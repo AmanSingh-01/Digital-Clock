@@ -1,0 +1,244 @@
+/* RESET CSS */
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* CSS VARIABLES */
+:root {
+  --bg-color: #191830;
+  --card1-color: #facf29;
+  --card2-color: #02ccfc;
+  --card3-color: #ff3124;
+  --card4-color: #0a2dbb;
+  --seconds-color: #f9d426;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card1 {
+  background: linear-gradient(180deg,#facf29,#ff3129);
+  height: 350px;
+  width: 350px;
+  border-radius: 400px;
+  margin-right: 200px;
+  animation-name: top-down1;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes top-down1 {
+  0% {
+    transform: translateY(130px);
+  }
+  100% {
+    transform: translateY(160px);
+  }
+}
+
+.card2 {
+  background: linear-gradient(180deg,#02ccfc, #0a2dbb);
+  height: 350px;
+  width: 350px;
+  border-radius: 400px;
+  margin-bottom: 270px;
+  animation-name: top-down2;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes top-down2 {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(40px);
+  }
+}
+
+.glass-card {
+  min-width: 10px;
+  min-height: 10px;
+  max-width: 750px;
+  max-height: 290px;
+  transition: 0.5s ease-in-out;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.06);
+  box-shadow: rgba(0,0,0,0.059) 0px 10px 15px -3px,rgba(0,0,0,0.05) 0px 4px 6px -2px;
+  position: absolute;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  backdrop-filter: blur(20px);
+  animation-name: fade-up;
+  animation-duration: 0.5s;
+}
+
+.hour-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 170px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px,
+  rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px,
+  rgba(0, 0, 0, 0.07) 0px 16px 16px;
+  border-radius: 10px;
+  backdrop-filter: blur(70px);
+}
+
+.clock-hour {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 120px;
+  font-weight: bold;
+  color: white;
+}
+
+.minute-card {
+  backdrop-filter: blur(70px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  height: 170px;
+  width: 170px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px,
+  rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px,
+  rgba(0, 0, 0, 0.07) 0px 16px 16px;
+}
+
+.clock-minute {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: white;
+  font-size: 120px;
+}
+
+.second-card {
+  backdrop-filter: blur(70px);
+  height: 170px;
+  width: 170px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px,
+  rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px,
+  rgba(0, 0, 0, 0.07) 0px 16px 16px;
+}
+
+.clock-second {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 120px;
+  color: var(--seconds-color);
+  font-weight: bold;
+}
+
+.colons {
+  display: flex;
+  justify-content: space-evenly;
+  position: absolute;
+  left: 26px;
+  width: 580px;
+}
+
+colon1 {
+  margin-right: -11px;
+}
+
+colon2 {
+  margin-right: 127px;
+}
+
+.colon {
+  font-size: 90px;
+  color: white;
+}
+
+.am-pm {
+  backdrop-filter: blur(70px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 88px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px,
+  rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px,
+  rgba(0, 0, 0, 0.07) 0px 16px 16px;
+}
+
+.am-pm-txt {
+  margin: 20px;
+  color: var(--seconds-color);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 850px) {
+  .colon {
+    display: none;
+  }
+
+  .card1 {
+    height: 200px;
+    margin-right: 10px;
+    width: 200px;
+  }
+
+  .card2 {
+    height: 200px;
+    margin-left: 10px;
+    width: 200px;
+  }
+
+  .glass-card {
+    max-height: 550px;
+    max-width: 200px;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .hour-card {
+    width: 130px;
+    height: 130px;
+  }
+
+  .clock-hour {
+    font-size: 80px;
+  }
+
+  .minute-card {
+    width: 130px;
+    height: 130px;
+  }
+
+  .clock-minute {
+    font-size: 80px;
+  }
+
+  .second-card {
+    width: 130px;
+    height: 130px;
+  }
+
+  .clock-second {
+    font-size: 80px;
+  }
+}
